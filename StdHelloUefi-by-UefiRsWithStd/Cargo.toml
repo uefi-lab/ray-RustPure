@@ -1,0 +1,17 @@
+
+[package]
+name = "hello-uefi-rs-with-std"
+version = "0.1.0"
+edition = "2024"  # Last-checked 2026-07-12 | https://doc.rust-lang.org/cargo/reference/manifest.html#the-edition-field
+
+[dependencies]
+
+# Attention: Don't activate the panic_handler feature, 
+#            as it will clash with the one coming from `std`.
+#
+uefi = { 
+         version = "0.38.0",    # Last-checked 2026-07-12 | https://crates.io/crates/uefi
+         features = ["alloc"], 
+         default-features = false 
+       }
+

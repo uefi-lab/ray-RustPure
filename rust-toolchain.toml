@@ -1,0 +1,10 @@
+
+[toolchain]
+  channel = "1.99"
+
+targets = [
+    "aarch64-unknown-uefi", 
+  # "i686-unknown-uefi",   # 32-bit
+    "x86_64-unknown-uefi"
+]
+

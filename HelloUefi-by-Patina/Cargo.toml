@@ -1,0 +1,18 @@
+
+
+# [workspace]
+
+[package]
+name = "hello-uefi-patina"
+version = "0.1.0"
+edition = "2024" 
+
+[dependencies]
+
+r-efi  = "7"          ## Last-checked 2026-10-20  v7.1.0 | https://crates.io/crates/r_efi
+
+patina = {            ## Last-checked 2026-11-06  v24.2.0 | https://crates.io/crates/patina
+    version = "24" , 
+    features = ["alloc", "global_allocator"]
+}
+

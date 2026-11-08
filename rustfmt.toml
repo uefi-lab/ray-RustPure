@@ -1,0 +1,44 @@
+
+#
+# 此文件, 主要是为了 **打断** 父目录自动爬升 找设置 的行为
+#
+
+# Ray: modified from
+#  https://github.com/OpenDevicePartnership/patina-apps/blob/main/rustfmt.toml
+# 
+# 改成 200 行宽, 标准入口 可以写在一行上
+#
+# 防止被 rustfmt 神经病一样的格式化，可以使用 #[rustfmt::skip]
+# 
+
+
+# rustfmt (and cargo fmt) will automatically pick up this config when run in the workspace.
+
+# NOTE: This file is automatically synchronized from Patina DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# - Patina DevOps Repo: https://github.com/OpenDevicePartnership/patina-devops
+# - File Sync Settings: https://github.com/OpenDevicePartnership/patina-devops/blob/main/.sync/Files.yml
+
+# Note that some items are included here set to their default values. This is to explicitly
+# reveal settings for more common options.
+
+# Keep these options sorted in ascending order to ease lookup with rustfmt documentation.
+
+force_explicit_abi = true        # Always print the ABI for extern items (e.g. extern {... will become extern "C" {...)
+hard_tabs = false                # Always uses spaces for indentation and alignment
+max_width = 200                  # The maximum width of each line                  RAY_CHANGE: 改成 200
+merge_derives = false            # Do not merge derives into a single line (leave to author discretion).
+imports_granularity = "Crate"    # Merge imports from a single crate into separate statements.
+newline_style = "Unix"           # Always use Linux line endings '\n'
+reorder_impl_items = false       # Do not force where type and const before macros and methods in impl blocks.
+reorder_imports = true           # Do reorder import and extern crate statements alphabetically for readability.
+reorder_modules = true           # Do reorder mod declarations alphabetically for readability.
+tab_spaces = 4                   # Use 4 spaces for indentation (Rust default).
+unstable_features = true         # Do not use unstable rustfmt features.           RAY_CHANGE: 改成 true
+use_small_heuristics = "Max"     # Set all granular width settings to the same as max_width (do not use heuristics)
+wrap_comments = false            # Leave comment formatting to author's discretion
+
+# 竖向对齐 unstable feature
+enum_discrim_align_threshold = 8 # Vertically align enum discriminants   RAY_CHANGE: 竖向对齐
+struct_field_align_threshold = 8 # Vertically align struct fields        RAY_CHANGE: 竖向对齐

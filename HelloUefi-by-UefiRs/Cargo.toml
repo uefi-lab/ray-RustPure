@@ -1,0 +1,14 @@
+
+[package]
+name = "hello-uefi-rs"
+version = "0.1.0"
+edition = "2024"  # Last-checked 2026-07-12 | https://doc.rust-lang.org/cargo/reference/manifest.html#the-edition-field
+
+[dependencies]
+
+log = "0.4"    #  0.4.33 | Last-checked 2026-07-12 | # https://crates.io/crates/log
+
+uefi = {       #  0.38.0 | Last-checked 2026-07-12 | https://crates.io/crates/uefi
+        version = "0.38.0",  
+        features = [ "panic_handler", "logger" ]
+       }

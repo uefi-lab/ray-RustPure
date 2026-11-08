@@ -1,0 +1,11 @@
+# 
+# 
+# 
+#
+
+#  cargo build --target aarch64-unknown-uefi
+
+[tasks.build]
+command = "cargo"
+args = ["build", "--target", "aarch64-unknown-uefi"]
+

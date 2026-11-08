@@ -1,0 +1,12 @@
+
+
+## [workspace]
+
+[package]
+name = "hello-uefi"
+version = "0.1.0"
+edition = "2024"  # Last-checked 2026-07-11 | https://doc.rust-lang.org/cargo/reference/manifest.html#the-edition-field
+
+[dependencies]
+
+r-efi = "7"   # Last-checked 2026-07-11 | https://crates.io/crates/r_efi

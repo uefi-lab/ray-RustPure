@@ -1,0 +1,31 @@
+
+[env]
+RUSTC_BOOTSTRAP = "1"
+
+[target.aarch64-unknown-uefi]
+
+rustflags = [
+     "-Z", "allow-features=uefi_std,allocator_api",
+]
+
+
+#
+# 此文件, 主要是为了 **打断** 父目录自动爬升 行为
+#
+#
+# [build]
+ # target-dir = "Build"
+ #
+ # 默认什么都不写、或没有这个文件, 使用 target 目录
+ # target 与 Cargo.toml 文件同级
+ #
+ # 这个设置, 不能通过 环境变量 推算, 只能写 相对路径, 绝对路径
+ # 只能
+ #  (1) 通过 环境变量 CARGO_TARGET_DIR  覆盖
+ #      $env:CARGO_TARGET_DIR  (PowerShell 语法)
+ #
+ #  (2) 通过 命令行参数 --target-dir 覆盖
+ #      cargo build --target-dir D:\RustPure\target
+ #
+ # --2026-07-12
+ #

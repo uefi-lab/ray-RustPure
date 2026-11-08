@@ -1,0 +1,33 @@
+
+
+[package]
+name = "hello-uefi-mu"
+version = "0.1.0"
+edition = "2024" 
+
+#
+# Common/MU/Cargo.toml
+#
+
+[dependencies]
+
+log  = "0.4"  
+
+r-efi = "^6"
+
+mu_pi = "7"              # https://crates.io/crates/mu_pi
+mu_rust_helpers = "4"
+patina = "24"
+
+mockall = {version = "0.14.0"}
+
+spin = { version = "0.12" }  # 
+
+# RustBootServicesAllocatorDxe = { path = "D:/ms_Milos/Devices_2/Common/MU/MsCorePkg/Crates/RustBootServicesAllocatorDxe" }
+
+# RustAdvancedLoggerDxe = { path = "D:/ms_Milos/Devices_2/Common/MU/AdvLoggerPkg/Crates/RustAdvancedLoggerDxe" }
+
+# uefi = { version = "0.38.0", features = ["alloc", "panic_handler", "logger" ]}
+
+# #
+# MuTelemetryHelperLib = { path = "D:/ms_Milos/Devices_2/Common/MU/MsWheaPkg/Crates/MuTelemetryHelperLib" }

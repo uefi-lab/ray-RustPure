@@ -1,0 +1,10 @@
+
+[package]
+name = "hello-uefi-std"
+version = "0.1.0"
+edition = "2024"  # Last-checked 2026-07-12 | https://doc.rust-lang.org/cargo/reference/manifest.html#the-edition-field
+
+[dependencies]
+
+r-efi = "5.2.0"   # align with uefi_std  | Last-checked 2026-07-12 | https://crates.io/crates/r_efi
+                  # uefi_std =  https://github.com/rust-lang/rust/blob/main/library/std/Cargo.toml

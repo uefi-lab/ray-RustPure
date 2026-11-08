@@ -1,0 +1,40 @@
+
+#
+# 此文件
+#  (1) 只是为了打断 Cargo 向父目录自动爬升找 workspace 的行为
+#
+#  (2) 此处不是个（能正常工作的）workspace 目录, 不能在这一层 build 
+#
+#       cargo build --target aarch64-unknown-uefi --workspace
+#
+#      因为, 各个子目录里，随意的 用了不同的 feature 设置
+#  
+#  放这个文件, 纯属无奈之举, 否则若是 自动爬升发生, 行为将不可预知，匪夷所思！
+#
+#  对（寄生型）初学者，这个行为 神奇 + 令满地抓狂
+#
+#  https://doc.rust-lang.org/cargo/reference/workspaces.html
+#
+#
+#  Copyright (c) Raymond Yang. All rights reserved. 2026-07
+#
+
+#
+# 此文件维持最小的内容，只要 格式合法, 凑合着能工作 就行.
+#
+
+[workspace]
+ resolver = "3"
+
+# Add packages
+members = [
+  "./Hello*",  
+  "./StdHello*",
+]
+
+exclude = [
+  "target",   # 默认 输出目录
+  ".cargo",   # 默认 build 参数控制目录
+  "Build",    # 自定义 输出目录
+  ## "./Std*",  # 使用 #![feature(uefi_std)]  视为另一个生态, cargo workspace 限制
+]
